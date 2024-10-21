@@ -29,8 +29,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        'password'
     ];
 
     /**
@@ -41,4 +40,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+     public function favoites()
+    {
+        return $this->hasMany(Favorite::class);
+    }
+
+     public function reserves()
+    {
+        return $this->hasMany(Reserves::class);
+    }
 }

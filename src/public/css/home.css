@@ -1,0 +1,265 @@
+/* public/css/styles.css */
+.container {
+    position: absolute;
+    top: 20px;
+    right:20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 0 1.1%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0px;
+    width:900px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+    margin-right: 0px;
+    width:20%;
+    font-size: 20px;        /* プルダウンリストのフォントサイズ */
+    padding: 25px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+/* .dropdown:focus {
+    border-color: #007bff;
+    outline: none;
+} */
+
+
+ 
+.search-input {
+    height: 80px; /* 高さを40pxに調整 */
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+   font-size: 35px; /* フォントサイズ */
+    width: 200px;
+    transition: border-color 0.3s;
+}
+
+.search-input::placeholder {
+    font-size: 34px; /* プレースホルダーのフォントサイズ */
+     opacity:50%;
+}
+
+
+.search-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.search-btn {
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0px;
+    font-size: 40px;
+    width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(237, 215, 215, 0.1);
+}
+
+.dropdown {
+    margin-right: 0px;
+    width: 20%;
+    padding: 30px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.dropdown:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.search-input {
+    height: 80px;
+    /* 高さを40pxに調整 */
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 35px;
+    /* フォントサイズ */
+    width: 200px;
+    transition: border-color 0.3s;
+}
+
+.search-input::placeholder {
+    font-size: 34px;
+    /* プレースホルダーのフォントサイズ */
+    opacity: 50%;
+}
+
+
+.search-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.search-btn {
+
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+/* カードのスタイル */
+.card-container {
+    overflow: hidden;
+    padding: 20px;
+}
+
+.card {
+    float: left;
+    width: calc(25% - 20px);
+    margin: 10px;
+    position: relative;
+    /* 追加 */
+    border-radius: 10px;
+    /* 角丸の追加 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 影の追加 */
+    overflow: hidden;
+    /* 角丸を適用するために必要 */
+}
+
+/* 写真のスタイル */
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 店舗名、都道府県、ボタンを左揃えにし、余白を追加 */
+.card-content {
+    padding: 15px;
+    text-align: left;
+    background-color: #fff;
+}
+
+.card-content h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* ハッシュタグのスタイル */
+.hashtags {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.hashtags span {
+    display: inline-block;
+    margin-right: 5px;
+    color: #007bff;
+}
+
+/* 詳しく見るボタンのスタイル */
+.details-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+  /* いいねボタンのスタイル */
+  .like-btn1 {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background-color: transparent;
+      border: none;
+      font-size: 24px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.3s;
+  }
+ 
+ .like-btn {
+     position: absolute;
+     bottom: 15px;
+     right: 15px;
+     background-color: transparent;
+     border: none;
+     font-size: 24px;
+     color: red;
+     cursor: pointer;
+     transition: color 0.3s;
+ }
+
+   .like-btn2 {
+       position: absolute;
+       bottom: 15px;
+       right: 15px;
+       background-color: transparent;
+       border: none;
+       font-size: 24px;
+       color: #ccc;
+       cursor: pointer;
+       transition: color 0.3s;
+   }
+
+ 
+        .like-btn3 {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+  .like-btn:hover {
+      color: red;
+  }
+
+  .like-btn.active {
+      color: red;
+  }
