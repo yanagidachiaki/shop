@@ -28,7 +28,7 @@ Route::get('/detail/:{shop_id}', [ShopController::class, 'show']);
 Route::post('/favorite', [ShopController::class, 'storeFavorite'])->middleware('auth')->name('favorites.store');
 
 // お気に入り削除用のルート
-Route::delete('/favorite', [ShopController::class, 'destroyFavorite'])->middleware('auth')->name('favorites.destroy');
+Route::delete('/mypage', [ShopController::class, 'destroyFavorite'])->middleware('auth')->name('favorites.destroy');
 
 // いいねボタン押下時のルート
 Route::post('/', [FavoriteController::class, 'like'])->name('like');
@@ -38,3 +38,17 @@ Route::get('/mypage', [ShopController::class, 'mypage'])->middleware('auth');
 
 // 予約完了ページ
 Route::get('/done', [ShopController::class, 'done'])->middleware('auth');
+
+// キーワード検索のためのルート
+Route::get('/shops/search', [ShopController::class, 'search'])->name('shops.search');
+
+// 予約登録のためのルート
+Route::post('/done', [ShopController::class, 'store'])->name('reservations.store');
+
+//mypageから詳細ページへのルート
+Route::get('/detail/{id}', [ShopController::class, 'show'])->name('shop.show');
+
+// 予約削除ルート
+Route::delete('/reservations/{id}', [ShopController::class, 'destroy'])->name('reservations.destroy');
+
+

@@ -1,0 +1,89 @@
+.detail-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 8px;
+    position: absolute;
+    top: 30px;
+}
+
+.shop-info {
+    width: 50%;
+    height: 50px;  
+    margin-right: 30px;     
+}
+
+.shop-info img {
+    width: 100%;
+}
+
+.shop-info p {
+    margin: 0;
+    color: #333;
+}
+
+.shop-info h2 {
+    margin: 0px 0;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    font-size: 34px;
+}
+
+.reservation-form {
+    background-color: #2979ff;
+    width: 40%;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.reservation-form h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.reservation-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.reservation-form input,
+.reservation-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.reservation-form input[type="date"],
+.reservation-form input[type="time"],
+.reservation-form select {
+    background-color: white;
+    color: black;
+}
+
+.reservation-summary {
+    background-color: #2962ff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.reservation-summary p {
+    margin: 5px 0;
+}
+
+.reserve-btn {
+    background-color: #0d47a1;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius-bottomleft: 5px;
+    cursor: pointer;
+}

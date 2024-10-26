@@ -10,15 +10,16 @@ class Reserve extends Model
     use HasFactory;
 
       protected $fillable = [
-        'shopname',
-        'reserve_id',
-        'area',
-        'genre',
+        'shop_id',
+        'user_id',
+        'day',
+        'time',
+        'number'
     ];
 
-     public function shops()
+     public function shop()
     {
-         return $this->belongsToMany(Shop::class);
+         return $this->belongsTo(Shop::class);
     }
 
      public function users()

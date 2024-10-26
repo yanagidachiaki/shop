@@ -19,7 +19,7 @@ class CreateReservesTable extends Migration
             $table->foreignId('shop_id')->constrained('shops')->onDelete('cascade');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->date('day');
-            $table->dateTime('time');
+            $table->time('time');
             $table->integer('number');
             $table->timestamps();
         });
