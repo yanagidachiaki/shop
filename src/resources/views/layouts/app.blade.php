@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="{{ asset('css/mypage.css') }}">
   <link rel="stylesheet" href="{{ asset('css/done.css') }}">
   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/thanks.css') }}">
   <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
   <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     <!-- Bootstrap Icons CDN -->

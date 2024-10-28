@@ -1,60 +1,91 @@
-.login-form__content {
+/* コンテナのスタイル */
+.login-container {
+    display: flex;
     margin: 0 auto;
-    padding: 30px 15px;
-    max-width: 1230px;
-}
-
-.login-form__heading {
-    margin-bottom: 20px;
     text-align: center;
-}
-
-.form {
+    justify-content: center;
     margin: 0 auto;
-    width: 25%;
-    text-align: center;
+    padding: 0;
+    padding-top: 100px;
+    box-sizing: border-box;
 }
 
-.form__group {
-    margin-bottom: 5px;
+/* 登録フォームのスタイル */
+.login-container .register-form {
+    width: 490px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form__group-title {
-    text-align: left;
-}
-
-.form__error {
-    height: 20px;
-    color: #ff0000;
-    text-align: left;
-}
-
-.form__input--text input {
-    padding: 10px;
-    width: 100%;
-    height: 40px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-
-    appearance: none;
-}
-
-.form__button {
-    margin-top: 20px;
-}
-
-.form__button-submit {
-    padding: 10px;
-    width: 30%;
-    height: 50px;
-    border: none;
-    border-radius: 3px;
-    background: #000;
+/* フォームヘッダーのスタイル */
+.login-container .form-header {
+    font-size: 18px;
+    font-weight: bold;
     color: #fff;
-    cursor: pointer;
+    background-color: blue;
+    margin-bottom: 20px;
+    padding: 0.2px;
+    padding-right: 200px;
+    border-radius: 8px 8px 0 0;
+
 }
 
-.register__link {
-    margin-top: 20px;
-    text-align: center;
+.login-container form {
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.login-container .form-header p {
+    padding-right: 170px;
+}
+
+/* 入力グループのスタイル */
+.login-container .input-group {
+    display: flex;
+    position: relative;
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+.login-container .input-group .img {
+    width: 40px;
+    height: 40px;
+    /* 修正: タイポ修正 */
+    margin-right: 12px;
+    margin-left: 30px;
+}
+
+.login-container .input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.login-container .input-group input {
+    width: 90%;
+    padding: 10px 10px 10px 5px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+
+/* ボタンのスタイル */
+.login-container button {
+    width: 30%;
+    height: 40px;
+    margin-left: 60%;
+    margin-bottom: 20px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }

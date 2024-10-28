@@ -18,7 +18,7 @@
                         <option value="{{ $genre->id }}" {{ request('genre_id') == $genre->id ? 'selected' : '' }}>{{ $genre->genre }}</option>
                     @endforeach
                 </select>
-
+                <img src="{{ asset('image/虫眼鏡の無料アイコン8.png') }}" alt="Description" style="width: 30px; height: 30px;">
                 <input type="text" class="search-input" id="search-input" name="query" placeholder="Search..." oninput="this.form.submit()" value="{{ request('query') }}" />
             </form>
         </div>

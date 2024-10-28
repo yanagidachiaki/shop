@@ -10,7 +10,8 @@
             @foreach($reserves as $reserve)
                 <div class="reservation-card">
                     <div class="reservation-header">
-                        <span>予約{{ $loop->iteration }}</span>
+                        <img src="{{ asset('image/時計.png') }}" alt="Description" style="width: 6%; height: 6%;">
+                        <span class="reservation-title">予約{{ $loop->iteration }}</span>
                         <form action="{{ route('reservations.destroy', $reserve->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
@@ -20,17 +21,17 @@
                         </form>
                     </div>
                     <div class="reservation-details">
-                        <p>Shop: {{ $reserve->shop->shopname }}</p>
-                        <p>Date: {{ $reserve->day }}</p>
-                        <p>Time: {{ \Carbon\Carbon::parse($reserve->time)->format('H:i') }}</p>
-                        <p>Number: {{ $reserve->number }}人</p>
+                        <p><span>Shop: </span><span>{{ $reserve->shop->shopname }}</span></p>
+                         <p><span>Date:</span><span> {{ $reserve->day }}</span></p>
+                         <p><span>Time:</span><span> {{ \Carbon\Carbon::parse($reserve->time)->format('H:i') }}</span></p>
+                         <p><span>Number:</span><span> {{ $reserve->number }}人</span></p>
                     </div>
                 </div>
             @endforeach
         </div>
 
         <div class="favorites">
-            <h3>お気に入り店舗</h3>
+            <h2>お気に入り店舗</h2>
             <div class="shop-info2">
                 @foreach($favorites as $favorite)
                     <div class="card">

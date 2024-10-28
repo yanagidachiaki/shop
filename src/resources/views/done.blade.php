@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-   <h1>Done Page</h1>
-    <p>ご予約ありがとうございます。</p>
+   <div class="done-container">
+        <div class="card">
+            <p>ご予約ありがとうございます</p>
+            <a href="/login" class="btn">戻る</a>
+        </div>
+      </div>
 @endsection

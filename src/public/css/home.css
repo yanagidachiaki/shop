@@ -15,7 +15,8 @@
     align-items: center;
 }
 
-.search-box {
+/* .search-box {
+    appearance: none;
     display: flex;
     align-items: center;
     background-color: #ffffff;
@@ -23,24 +24,48 @@
     width:900px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+} */
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0px;
+    font-size: 40px;
+    width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(237, 215, 215, 0.1);
 }
 
 .dropdown {
+    appearance: none;
     margin-right: 0px;
-    width:20%;
-    font-size: 20px;        /* プルダウンリストのフォントサイズ */
-    padding: 25px;
+    width: 27%;
+    padding: 30px;
+    font-size: 21px;
     border: 1px solid #fff;
     border-radius: 4px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     transition: border-color 0.3s;
 }
 
-/* .dropdown:focus {
-    border-color: #007bff;
-    outline: none;
-} */
-
+.dropdown::after{
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        /* 矢印の右位置調整 */
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #333;
+        /* 矢印の色 */
+        pointer-events: none;
+        /* クリック操作を無効に */
+}
 
  
 .search-input {
@@ -73,27 +98,6 @@
     transition: background-color 0.3s;
 }
 
-.search-box {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 0px;
-    font-size: 40px;
-    width: 800px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(237, 215, 215, 0.1);
-}
-
-.dropdown {
-    margin-right: 0px;
-    width: 20%;
-    padding: 30px;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s;
-}
-
 .dropdown:focus {
     border-color: #007bff;
     outline: none;
@@ -107,7 +111,7 @@
     margin-right: 10px;
     font-size: 35px;
     /* フォントサイズ */
-    width: 200px;
+    width: 150px;
     transition: border-color 0.3s;
 }
 
@@ -132,7 +136,6 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 
 
 /* カードのスタイル */

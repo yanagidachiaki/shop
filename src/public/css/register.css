@@ -1,60 +1,91 @@
-.register-form__content {
-    margin: 0 auto;
-    padding: 30px 15px;
-    max-width: 1230px;
-}
 
-.register-form__heading {
-    margin-bottom: 20px;
+
+/* コンテナのスタイル */
+.register-container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-.form {
-    margin: 0 auto;
-    width: 25%;
-    text-align: center;
+/* 登録フォームのスタイル */
+.register-container .register-form {
+    width: 430px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form__group {
-    margin-bottom: 5px;
-}
-
-.form__group-title {
-    text-align: left;
-}
-
-.form__error {
-    height: 20px;
-    color: #ff0000;
-    text-align: left;
-}
-
-.form__input--text input {
-    padding: 10px;
-    width: 100%;
-    height: 40px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-
-    appearance: none;
-}
-
-.form__button {
-    margin-top: 20px;
-}
-
-.form__button-submit {
-    padding: 10px;
-    width: 30%;
-    height: 50px;
-    border: none;
-    border-radius: 3px;
-    background: #000;
+/* フォームヘッダーのスタイル */
+.form-header {
+    font-size: 18px;
+    font-weight: bold;
     color: #fff;
-    cursor: pointer;
+    background-color: #146bf7;
+    padding: 3px 0;
+    padding-right: 110px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
 }
 
-.login__link {
-    margin-top: 20px;
-    text-align: center;
+form {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.form-header p {
+    padding-right: 170px;
+}
+
+/* 入力グループのスタイル */
+.input-group {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+form .input-group .img {
+    width: 40px;
+    height: 40px;
+    /* 修正: タイポ修正 */
+    margin-right: 13px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.input-group input {
+    width: 90%;
+    padding: 10px 10px 10px 5px;
+    border: none;
+    border-bottom: 2px solid #999;
+    outline: none;
+    font-size: 16px;
+}
+
+/* ボタンのスタイル */
+.register-form button {
+    width: 30%;
+    height: 40px;
+    margin-left: 70.5%;
+    margin-bottom: 20px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }

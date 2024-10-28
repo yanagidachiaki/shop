@@ -4,15 +4,16 @@
 <div class="detail-container">
     <!-- Shop Information Section -->
     <div class="shop-info">
-        <p><a href=" {{ route('home')}}">戻る</a></p>
+        <div><a href=" {{ route('home')}}">戻る</a></div>
         <h2>{{ $shop->shopname }}</h2>
         <img src="{{ $shop->image }}" alt="Shop Image">
-        <p>#{{ $shop->area->area }}  #{{ $shop->genre->genre }}</p>
+        <p>#{{ $shop->area->area }}    #{{ $shop->genre->genre }}</p>
         <p>{{ $shop->info }}</p>
     </div>
 
     <!-- Reservation Form Section -->
     <div class="reservation-form">
+      <div class="reservation-form2">
         <h3>予約</h3>
         <form action="{{ route('reservations.store') }}" method="POST">
             @csrf
@@ -23,15 +24,15 @@
             @endauth
 
             <!-- 日付の入力 -->
-            <label for="date">Date</label>
-            <input type="date" id="date" name="day" value="{{ \Carbon\Carbon::now()->format('Y-m-d') }}" required>
+            <label for="date"></label>
+            <input type="date" id="date" name="day" value="{{ \Carbon\Carbon::now()->format('Y-m-d') }}"  style="width: 30%" required>
 
             <!-- 時間の入力 -->
-            <label for="time">Time</label>
+            <label for="time"></label>
             <input type="time" id="time" name="time" required>
 
             <!-- 人数の選択 -->
-            <label for="number">Number</label>
+            <label for="number"></label>
             <select id="number" name="number" required>
                 @for ($i = 1; $i <= 10; $i++)
                     <option value="{{ $i }}">{{ $i }}人</option>
@@ -45,7 +46,7 @@
                 <p><strong>Time:</strong> <span id="summary-time"></span></p>
                 <p><strong>Number:</strong> <span id="summary-number">1人</span></p>
             </div>
-
+          </div>
            @auth
              <!-- ログイン済みのユーザーに表示される予約ボタン -->
              <button type="submit" class="reserve-btn">予約する</button>

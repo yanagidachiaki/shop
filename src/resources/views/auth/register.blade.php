@@ -5,46 +5,26 @@
 @endsection
 
 @section('content')
-<div class="register__content">
-  <div class="register-form__heading">
-    <h2>Registration</h2>
-  </div>
-  <form class="form" action="{{ route('register') }}" method="post"> <!-- 修正: actionを登録ルートに変更 -->
-    @csrf
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">お名前</span>
-      </div>
-      <div class="form__group-content">
-        <div class="form__input--text">
-          <input type="text" name="name"  placeholder="Username" required/> <!-- required属性を追加 -->
-        </div>
-      </div>
-    </div>
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">メールアドレス</span>
-      </div>
-      <div class="form__group-content">
-        <div class="form__input--text">
-          <input type="email" name="email"  placeholder="Email" required/> <!-- required属性を追加 -->
-        </div>
-      </div>
-    </div>
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">パスワード</span>
-      </div>
-      <div class="form__group-content">
-        <div class="form__input--text">
-          <input type="password" name="password" placeholder="Password" required/> <!-- required属性を追加 -->
-        </div>
-      </div>
-    </div>
-    <div class="form__button">
-      <button class="form__button-submit" type="submit">登録</button>
-    </div>
-  </form>
-</div>
 
+<div class="register-container">
+   <div class="register-form">
+        <div class="form-header"><p>Registration</p></div>
+        <form class="form" action="{{ route('register') }}" method="post">
+          @csrf
+            <div class="input-group">
+                <div class="img"><img src="{{ asset('image/人物アイコン.png') }}" alt="Description" style="width: 100%; height: 100%;"></div>
+                <input type="text" name="name"  placeholder="Username" required/> 
+            </div>
+            <div class="input-group">
+                <div class="img"><img src="{{ asset('image/メールアイコン.png') }}" alt="Description" style="width: 100%; height: 100%;"></div>
+                <input type="email" name="email"  placeholder="Email" required/> 
+            </div>
+            <div class="input-group">
+                <div class="img"><img src="{{ asset('image/カギアイコン.png') }}" alt="Description" style="width: 100%; height: 100%;"></div>
+                <input type="password" name="password" placeholder="Password" required/> 
+            </div>
+            <button type="submit">登録</button>
+        </form>
+     </div>
+  </div>
 @endsection

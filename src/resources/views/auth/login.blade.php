@@ -5,48 +5,31 @@
 @endsection
 
 @section('content')
-<div class="login__content">
-  <div class="login-form__heading">
-    <h2>ログイン</h2>
-  </div>
-  <form class="form" action="/login" method="post">
-    @csrf
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">メールアドレス</span>
-      </div>
-      <div class="form__group-content">
-        <div class="form__input--text">
-          <input type="email" name="email" value="{{ old('email') }}" />
-        </div>
-        <div class="form__error">
+<div class="login-container">
+   <div class="register-form">
+        <div class="form-header"><p>Login</p></div>
+        <form action="/login" method="post">
+        @csrf
+            <div class="input-group">
+                <div class="img"><img src="{{ asset('image/メールアイコン.png') }}" alt="Description" style="width: 100%; height: 100%;"></div>
+                <input type="email" name="email" placeholder="Email" value="{{ old('email') }}"required>
+            </div>
+            <div class="form__error">
           @error('email')
           {{ $message }}
           @enderror
         </div>
-      </div>
-    </div>
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">パスワード</span>
-      </div>
-      <div class="form__group-content">
-        <div class="form__input--text">
-          <input type="password" name="password" />
-        </div>
-        <div class="form__error">
+            <div class="input-group">
+                <div class="img"><img src="{{ asset('image/カギアイコン.png') }}" alt="Description" style="width: 100%; height: 100%;"></div>
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form__error">
           @error('password')
           {{ $message }}
           @enderror
         </div>
-      </div>
+            <button type="submit">ログイン</button>
+        </form>
     </div>
-    <div class="form__button">
-      <button class="form__button-submit" type="submit">ログイン</button>
-    </div>
-  </form>
-  <div class="register__link">
-    <a class="register__button-submit" href="/register">会員登録の方はこちら</a>
-  </div>
 </div>
 @endsection

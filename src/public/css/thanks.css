@@ -1,0 +1,48 @@
+/* コンテナのスタイル */
+.thanks-container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+
+}
+
+/* 登録フォームのスタイル */
+.thanks-container .register-form {
+    width: 550px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thanks-container .register-form p {
+    padding-top: 70px;
+    font-size: 29px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.thanks-container .register-form form {
+    padding-top: 30px;
+    padding-bottom: 90px;
+}
+
+/* ボタンのスタイル */
+.thanks-container .register-form form button {
+    width: 25%;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
