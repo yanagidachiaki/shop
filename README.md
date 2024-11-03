@@ -8,5 +8,7 @@
 　　　　　ユーザ登録・ログインページ・お気に入り登録・予約受付登録
      　　そのほか
        　エリア検索・ジャンル（ラーメン・焼肉など）検索・店舗検索機能
+仕様技術・環境:Laravel Framework 8.83.8
+テーブル設計：[Rese テーブル仕様書.pdf](https://github.com/user-attachments/files/17608926/Rese.pdf)
 E-R図:
 ![s-blob-v1-IMAGE-KNhRQGRLTW8](https://github.com/user-attachments/assets/adf1e120-dd6a-4a8b-93c2-e8bb5a3269a4)
