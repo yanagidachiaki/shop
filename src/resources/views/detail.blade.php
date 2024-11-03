@@ -2,13 +2,18 @@
 
 @section('content')
 <div class="detail-container">
-    <!-- Shop Information Section -->
-    <div class="shop-info">
-        <div><a href=" {{ route('home')}}">戻る</a></div>
+    <div class="detail-container2">
+     <!-- Shop Information Section -->
+      <div class="shop-info">
+        <a href="{{ route('home') }}"><img src="{{ asset('image/戻る.png') }}" alt="戻る" style="background-color: white; width:50px; height:auto; border-radius: 11px; 
+             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); border: 2px solid #ccc;"></a>
         <h2>{{ $shop->shopname }}</h2>
+       </div>
+      <div class="shop-info2">
         <img src="{{ $shop->image }}" alt="Shop Image">
         <p>#{{ $shop->area->area }}    #{{ $shop->genre->genre }}</p>
         <p>{{ $shop->info }}</p>
+       </div>
     </div>
 
     <!-- Reservation Form Section -->

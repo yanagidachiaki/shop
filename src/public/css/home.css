@@ -15,18 +15,6 @@
     align-items: center;
 }
 
-/* .search-box {
-    appearance: none;
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 0px;
-    width:900px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-} */
-
-
 .search-box {
     display: flex;
     align-items: center;
@@ -38,8 +26,20 @@
     box-shadow: 0 2px 8px rgba(237, 215, 215, 0.1);
 }
 
+.arrow-image {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: auto;
+    pointer-events: none;
+    /* 矢印をクリック不可にする */
+}
+
 .dropdown {
     appearance: none;
+    -webkit-appearance: none;
     margin-right: 0px;
     width: 27%;
     padding: 30px;
@@ -49,24 +49,6 @@
     background-color: #ffffff;
     transition: border-color 0.3s;
 }
-
-.dropdown::after{
-        content: "";
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        /* 矢印の右位置調整 */
-        transform: translateY(-50%);
-        width: 0;
-        height: 0;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: 6px solid #333;
-        /* 矢印の色 */
-        pointer-events: none;
-        /* クリック操作を無効に */
-}
-
  
 .search-input {
     height: 80px; /* 高さを40pxに調整 */

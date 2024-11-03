@@ -11,17 +11,19 @@ Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('
 // 登録処理
 Route::post('/register', [AuthController::class, 'register']);
 
+//ログイン画面遷移
+Route::post('/login', [AuthController::class, 'login']);
+
 //サンクスページ表示、会員登録ありがとうございます
 Route::get('/thanks', function () {
     return view('thanks'); // サンクスページを表示
-})->name('thanks');
+});
 
 //トップページ表示用のルート
 Route::get('/', [ShopController::class, 'index'])->name('home');
 
-// 飲食店詳細ページのルート
-Route::get('/detail/:{shop_id}', [ShopController::class, 'show']);
-// ->name('shop.detail')
+// いいねボタン押下時のルート
+Route::post('/', [FavoriteController::class, 'like'])->name('like');
 
 //お気に入りボタンがfavoritesテーブルに登録保存
 // お気に入り保存用のルート
@@ -29,9 +31,6 @@ Route::post('/favorite', [ShopController::class, 'storeFavorite'])->middleware('
 
 // お気に入り削除用のルート
 Route::delete('/mypage', [ShopController::class, 'destroyFavorite'])->middleware('auth')->name('favorites.destroy');
-
-// いいねボタン押下時のルート
-Route::post('/', [FavoriteController::class, 'like'])->name('like');
 
 // ログインしているユーザーのみアクセス可能
 Route::get('/mypage', [ShopController::class, 'mypage'])->middleware('auth');
@@ -43,10 +42,14 @@ Route::get('/done', [ShopController::class, 'done'])->middleware('auth');
 Route::get('/shops/search', [ShopController::class, 'search'])->name('shops.search');
 
 // 予約登録のためのルート
-Route::post('/done', [ShopController::class, 'store'])->name('reservations.store');
+Route::post('/done', [ShopController::class, 'store'])->middleware('auth')->name('reservations.store');
+
+// ホームから飲食店詳細ページのルート
+Route::get('/detail/:{shop_id}', [ShopController::class, 'show']);
+// ->name('shop.detail')
 
 //mypageから詳細ページへのルート
-Route::get('/detail/{id}', [ShopController::class, 'show'])->name('shop.show');
+Route::get('/detail/:{id}', [ShopController::class, 'show'])->middleware('auth')->name('shop.show');
 
 // 予約削除ルート
 Route::delete('/reservations/{id}', [ShopController::class, 'destroy'])->name('reservations.destroy');

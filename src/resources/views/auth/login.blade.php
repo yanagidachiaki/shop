@@ -12,22 +12,12 @@
         @csrf
             <div class="input-group">
                 <div class="img"><img src="{{ asset('image/メールアイコン.png') }}" alt="Description" style="width: 100%; height: 100%;"></div>
-                <input type="email" name="email" placeholder="Email" value="{{ old('email') }}"required>
-            </div>
-            <div class="form__error">
-          @error('email')
-          {{ $message }}
-          @enderror
-        </div>
+                <input type="email" name="email" class="@error('email') error-input @enderror" placeholder="@error('email') {{ $message }} @else Email @enderror" value="{{ old('email') }}"/>
+            </div>        
             <div class="input-group">
                 <div class="img"><img src="{{ asset('image/カギアイコン.png') }}" alt="Description" style="width: 100%; height: 100%;"></div>
-                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="password" class="@error('password') error-input @enderror" placeholder="@error('password') {{ $message }} @else Possword @enderror" value="{{ old('password') }}"/>
             </div>
-            <div class="form__error">
-          @error('password')
-          {{ $message }}
-          @enderror
-        </div>
             <button type="submit">ログイン</button>
         </form>
     </div>

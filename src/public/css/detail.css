@@ -1,16 +1,23 @@
 .detail-container {
     display: flex;
     justify-content: space-between;
-    margin: 0 60px;
+    margin: 0 45px;
     border-radius: 8px;
 }
 
-.shop-info {
+.detail-container2{
     width: 50%;
-    height: 50px;    
 }
 
-.shop-info img {
+.shop-info {
+    display: flex;
+    padding-top: 30px;
+    width: 50%;
+    height: 50px; 
+    margin-bottom: 50px;  
+}
+
+.shop-info2 img {
     width: 100%;
 }
 
@@ -31,9 +38,8 @@
 
 .shop-info h2 {
     margin: 0px 0;
-  
     padding-bottom: 70px;
-    padding-left: 100px;
+    padding-left: 40px;
     font-size: 34px;
 }
 

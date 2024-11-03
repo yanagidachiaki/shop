@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\AuthorRequest;
+use App\Http\Requests\ShopRequest; 
+
 
 class AuthController extends Controller
 {
@@ -14,8 +17,9 @@ class AuthController extends Controller
     }
 
     // 登録処理
-    public function register(Request $request)
-    {       
+    public function register(AuthorRequest $request)
+    {         
+
          // ユーザーを作成,usersテーブルに保存
         User::create([
         'name' => $request->input('name'),  
@@ -23,33 +27,31 @@ class AuthController extends Controller
         'password' => bcrypt($request->input('password')), 
         ]);
 
-        return redirect()->route('thanks'); // ありがとうページへリダイレクト
+         // thanksページにリダイレクト
+         return redirect('/thanks'); 
     }
 
     // ログインフォームを表示
-    public function showLoginForm()
+    public function showLoginForm(ShopRequest $request)
     {
         return view('auth.login');
     }
 
     // ログイン処理
-    public function login(Request $request)
+    public function login(ShopRequest $request)
     {
-        // バリデーション
-        $credentials = $request->validate([
-            'email' => 'required|string|email',
-            'password' => 'required|string',
-        ]);
+          // 認証情報を取得
+    $credentials = $request->only('email', 'password');
 
-        // 認証
-        if (Auth::attempt($credentials)) {
-            // 認証に成功した場合のリダイレクト
-            return redirect()->intended('home');
-        }
+    // 認証
+    if (Auth::attempt($credentials)) {
+        // 認証に成功した場合のリダイレクト
+        return redirect()->intended('/');
+    }
+     // 認証に失敗した場合、エラーメッセージをセッションに設定
+    return back()->withErrors([
+        'loginError' => 'メールアドレスまたはパスワードが間違っています。',
+    ])->withInput($request->only('email'));
 
-        // 認証に失敗した場合のエラーメッセージ
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ]);
     }
 }

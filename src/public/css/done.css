@@ -6,6 +6,7 @@
 }
 
 .done-container .card {
+    width:700px;
     background-color: white;
     padding: 120px;
     text-align: center;

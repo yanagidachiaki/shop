@@ -29,4 +29,14 @@ class AuthorRequest extends FormRequest
             'password' => 'required|string|min:8',
         ];
     }
+    public function messages()
+    {
+        return [
+            'name.required' => 'メールアドレスは必須です。',
+            'email.required' => 'メールアドレスは必須です。',
+            'email.email' => '有効なメールアドレスを入力してください。',
+            'password.required' => 'パスワードは必須です。',
+            'password.min' => 'パスワードは8文字以上で入力してください。',
+        ];
+    }
 }

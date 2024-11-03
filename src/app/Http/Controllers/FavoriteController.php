@@ -42,7 +42,7 @@ class FavoriteController extends Controller
         Favorite::where('user_id', $userId)->where('shop_id', $id)->delete();
 
         // ホーム画面にリダイレクト
-        return redirect()->route('mypage')->with('success', 'お気に入りを削除しました。');
+        return redirect()->route('mypage');
     }
     
 }

@@ -3,7 +3,7 @@
 @section('content')
 <div class="card-container">
     <div class="container">
-        <div class="search-box">
+        <div class="search-box">   
             <form action="{{ route('home') }}" method="GET">
                 <select class="dropdown" id="dropdown1" name="area_id" onchange="this.form.submit()">
                     <option value="">All area</option>
@@ -11,7 +11,6 @@
                         <option value="{{ $area->id }}" {{ request('area_id') == $area->id ? 'selected' : '' }}>{{ $area->area }}</option>
                     @endforeach
                 </select>
-
                 <select class="dropdown" id="dropdown2" name="genre_id" onchange="this.form.submit()">
                     <option value="">All genre</option>
                     @foreach ($genres as $genre)
