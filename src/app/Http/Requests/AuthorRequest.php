@@ -32,7 +32,7 @@ class AuthorRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'メールアドレスは必須です。',
+            'name.required' => '名前は必須です。',
             'email.required' => 'メールアドレスは必須です。',
             'email.email' => '有効なメールアドレスを入力してください。',
             'password.required' => 'パスワードは必須です。',
